@@ -9485,14 +9485,14 @@ const React = __webpack_require__(50);
 module.exports = class Router extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { hash: window.location.hash //Assigns initial URL hash value.
+		this.state = { hash: window.location.hash // Assigns initial URL hash value.
 		};this.updateHash = this.updateHash.bind(this);
 	}
 	updateHash(event) {
 		this.setState({ hash: window.location.hash });
 	}
 	componentDidMount() {
-		window.addEventListener("hashchange", this.updateHash, false); //Feeds new URL hash values.
+		window.addEventListener("hashchange", this.updateHash, false); // Feeds new URL hash values.
 	}
 	componentWillUnmount() {
 		window.removeEventListener("hashchange", this.updateHash, false);
